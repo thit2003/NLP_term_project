@@ -1,75 +1,76 @@
 # Sentiment Analysis for English-Thai Code-Mixed Texts
 
-This project delivers a practical sentiment analysis tool designed specifically for **English-Thai code-mixed text** (e.g., "I am so ดีใจ today"). [cite_start]It addresses the challenge of analyzing the "wild west" of bilingual internet slang and informal scripts found on social media platforms[cite: 54, 55, 74].
+This project delivers a practical sentiment analysis tool designed specifically for **English-Thai code-mixed text** (e.g., "I am so ดีใจ today"). It addresses the challenge of analyzing the "wild west" of bilingual internet slang and informal scripts found on social media platforms.
 
 ## 👥 Team Members
-* [cite_start]**Thit Lwin Win Thant** (ID: 6540122) [cite: 57]
-* [cite_start]**Kaung Khant Lin** (ID: 6540131) [cite: 57]
-* [cite_start]**Thust Thongsricharoen** (ID: 6714508) [cite: 57]
+* **Thit Lwin Win Thant** (ID: 6540122)
+* **Kaung Khant Lin** (ID: 6540131)
+* **Thust Thongsricharoen** (ID: 6714508)
 
 ---
 
 ## 📖 Project Overview
-[cite_start]Real-world social media streams in Thailand often feature heavy language mixing, slang, and intentional misspellings[cite: 72, 73]. Standard models struggle to process this effectively. [cite_start]This project builds a lightweight pipeline that combines heuristic preprocessing tools with transformer-based fine-tuning to accurately classify sentiment[cite: 75].
+Real-world social media and comment streams often feature heavy language mixing, slang, and intentional misspellings. Standard models often struggle to process this effectively. This project builds a lightweight, practical pipeline combining heuristic preprocessing tools with transformer-based fine-tuning to accurately classify sentiment.
 
 ### Key Objectives
-* [cite_start]**Classification:** Achieve accurate sentiment labeling (**Positive, Negative, Neutral**) for mixed-language sentences[cite: 13, 79].
-* [cite_start]**Identification:** Perform token-level language identification using fast heuristics (Unicode ranges) rather than heavy models[cite: 80].
-* [cite_start]**Robustness:** Implement normalization for slang and misspellings to improve reliability[cite: 81].
-* [cite_start]**Practicality:** Create a demo web app and a working classifier suitable for social media monitoring and customer feedback analysis[cite: 38, 43].
+* **Classification:** Achieve accurate sentiment labeling (**Positive, Negative, Neutral**) for mixed-language sentences.
+* **Identification:** Perform token-level language identification using fast heuristics (Unicode ranges) rather than heavy models.
+* **Robustness:** Implement normalization for slang and misspellings to improve reliability.
+* **Efficiency:** Create a pipeline with minimal manual work by using automated "silver labels" and a high-quality "gold set" for final evaluation.
+* **Key Deliverable:** A working sentiment classifier, a demo web app, and a detailed failure analysis report.
 
 ---
 
 ## 🧠 Model Architecture
-[cite_start]We utilize **XLM-RoBERTa base (~270M parameters)** as the core model[cite: 15, 20].
+We utilize **XLM-RoBERTa base (~270M parameters)** as the core model.
 
 **Why XLM-RoBERTa?**
-* [cite_start]**Industry Standard:** It is currently the standard for this specific scenario, outperforming mBERT in Thai contexts[cite: 20, 23, 28].
-* [cite_start]**Shared Vocabulary:** Uses a "SentencePiece" tokenizer that processes Thai characters and English words in the same sequence without breaking, which is critical for code-mixing[cite: 25, 26].
-* [cite_start]**Cross-Lingual Transfer:** Trained on CommonCrawl data in 100+ languages; it learns that concepts like "happy" (EN) and "ดีใจ" (TH) occupy similar vector spaces[cite: 24, 27].
+* **Industry Standard:** XLM-RoBERTa (XLM-R) is currently the industry standard for this specific scenario.
+* **Performance:** It consistently outperforms multilingual BERT (mBERT) because it was trained on significantly more Thai web data.
+* **Shared Vocabulary:** It uses a "SentencePiece" tokenizer that doesn't rely on spaces. It can process Thai characters and English words in the same sequence without breaking.
+* **Cross-Lingual Transfer:** By training on CommonCrawl data in 100+ languages, it learns that words like "happy" (EN) and "ดีใจ" (TH) occupy similar vector spaces, which is critical for code-mixed sentences.
 
 ---
 
 ## 📂 Datasets
 The model is trained on a combination of established corpora and scraped social media data:
 
-1.  [cite_start]**Wisesight Sentiment Corpus:** 26,737 samples for monolingual Thai sentiment[cite: 3].
-2.  [cite_start]**SST-2 (Stanford Sentiment Treebank):** 67,349 samples for English sentiment[cite: 4].
-3.  **Code-Mixed Data (Scraped):**
-    * [cite_start]**Sources:** YouTube comments from Thai tech/gaming channels (e.g., **9arm**, **Bay Riffer**) and Twitter/X hashtags[cite: 7].
-    * [cite_start]**Labeling:** Uses automated "silver-labeling" via Unicode ranges and heuristics, plus a manually labeled "gold" evaluation set of ~200 sentences[cite: 8, 9].
+1.  **Wisesight Sentiment Corpus:** 26,737 samples for monolingual Thai sentiment.
+2.  **SST-2 (Stanford Sentiment Treebank):** 67,349 samples for English sentiment.
+3.  **Code-Mixed Data (Scraped) only if it is needed:**
+    * **Sources:** YouTube comments from Thai tech/gaming channels (e.g., **9arm**, **Bay Riffer**) and Twitter/X hashtags where English-Thai mixing is common.
+    * **Labeling:** Uses automated "silver-labeling" via Unicode ranges and heuristics, plus a manually labeled "gold" evaluation set of ~200 sentences.
 
 ---
 
 ## ⚙️ Methodology & Pipeline
 
-[cite_start]The system follows a linear pipeline[cite: 42]:
+The system follows a linear pipeline:
 
-1.  [cite_start]**Input:** Raw text sequence (e.g., "วันนี้ server ล่ม")[cite: 32].
+1.  **Input:** Raw text sequence (e.g., "วันนี้ server ล่ม").
 2.  **Preprocessing:**
-    * [cite_start]**Tokenization:** Using PyThaiNLP[cite: 86].
-    * [cite_start]**Language ID (LID):** Token-level tagging using Unicode ranges (Thai script -> TH, Latin -> EN)[cite: 93].
-    * [cite_start]**Normalization:** Uses a slang dictionary (`slang_dictionary.json`) and Levenshtein distance for fuzzy matching to handle misspellings[cite: 90, 91].
-3.  [cite_start]**Model Inference:** Fine-tuned XLM-RoBERTa processes the normalized tokens[cite: 42].
-4.  [cite_start]**Output:** Sentiment classification (Positive/Negative/Neutral) with a confidence score[cite: 34, 35].
+    * **Tokenization:** Using PyThaiNLP.
+    * **Language ID (LID):** Token-level tagging using Unicode ranges (Thai script -> TH, Latin -> EN) to keep the pipeline lightweight.
+    * **Normalization:** Uses a slang dictionary (`slang_dictionary.json`) and Levenshtein distance for fuzzy matching to handle misspellings.
+3.  **Model Inference:** Fine-tuned XLM-RoBERTa processes the normalized tokens.
+4.  **Output:** Sentiment classification (Positive/Negative/Neutral) with a confidence score.
 
 ---
 
 ## 📊 Evaluation Metrics
 To prove accuracy, speed, and robustness, we track the following metrics:
-* [cite_start]**Accuracy:** Macro F1 score on the gold evaluation set[cite: 45].
-* [cite_start]**Error Analysis:** Confusion matrix to analyze failures, specifically when English content exceeds 50% of the sentence[cite: 46].
-* [cite_start]**Speed:** Inference latency per sentence (ms)[cite: 47].
-* [cite_start]**Robustness:** Word Error Rate (WER) and Character Error Rate (CER) between raw and normalized text[cite: 48].
+* **Accuracy:** Macro F1 score on the gold evaluation set.
+* **Error Analysis:** Confusion matrix to analyze failures, specifically when English content exceeds 50% of the sentence.
+* **Speed:** Inference latency per sentence (ms).
+* **Robustness:** Word Error Rate (WER) and Character Error Rate (CER) between raw and normalized text.
 
 ---
 
 ## 🛠️ Usage
-[cite_start]*This project results in a user-friendly web app where users enter text and the system displays the sentiment and highlighted language tags[cite: 43].*
+*This project results in a user-friendly web app where users enter text and the system displays the sentiment.*
 
 **Input Example:**
-```text
 วันนี้ server ล่ม
 
 **Output Example:**
-* Sentiment: Negative
+Sentiment: Negative
