@@ -1,4 +1,4 @@
 # This includes instructions and goal for our project
 - Instructions Set
-- Goals
+- Goal
 - Project Structure
