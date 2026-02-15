@@ -1,0 +1,1 @@
+xlm-roberta-base fine-tuned on Wisesight+SST2, 3 epochs, lr=2e-5
