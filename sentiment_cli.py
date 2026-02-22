@@ -21,6 +21,7 @@ Usage:
 import argparse
 import json
 import os
+import re
 from pathlib import Path
 from typing import Dict, Optional, Tuple
 
@@ -60,7 +61,10 @@ def get_default_model_dir() -> str:
 
 
 def load_slang_dictionary(path: Optional[str]) -> Dict[str, str]:
-    """Load slang dictionary JSON mapping (token -> normalized form)."""
+    """Load slang dictionary JSON mapping (token -> normalized form).
+
+    Keys are normalized to lowercase for case-insensitive matching.
+    """
     if not path:
         return {}
     p = Path(path)
@@ -69,7 +73,11 @@ def load_slang_dictionary(path: Optional[str]) -> Dict[str, str]:
         return {}
     try:
         with p.open("r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
+            if not isinstance(data, dict):
+                print(f"[warn] Slang dictionary at {p} is not a JSON object. Continuing without normalization.")
+                return {}
+            return {str(k).strip().lower(): str(v) for k, v in data.items()}
     except Exception as e:
         print(f"[warn] Failed to load slang dictionary: {e}. Continuing without normalization.")
         return {}
@@ -128,12 +136,22 @@ def tokenize_text(text: str) -> list:
 
 
 def normalize_text(text: str, slang_dict: Dict[str, str]) -> str:
-    """Normalize tokens using slang dictionary; keep original if not found."""
+    """Normalize text using slang dictionary with case-insensitive, punctuation-aware matching.
+
+    - Preserves original punctuation and spacing.
+    - Replaces only word-like tokens whose lowercase form exists in slang_dict.
+    """
     if not slang_dict:
         return text
-    tokens = tokenize_text(text)
-    normalized = [slang_dict.get(tok, tok) for tok in tokens]
-    return " ".join(normalized)
+
+    # Match word-like tokens (supports Unicode letters/digits and keeps punctuation outside token).
+    token_pattern = re.compile(r"[^\W_]+(?:[-'][^\W_]+)*", re.UNICODE)
+
+    def replace_token(match: re.Match) -> str:
+        token = match.group(0)
+        return slang_dict.get(token.lower(), token)
+
+    return token_pattern.sub(replace_token, text)
 
 
 def load_model_and_tokenizer(model_id_or_path: str) -> Tuple[AutoTokenizer, AutoModelForSequenceClassification]:
@@ -218,7 +236,7 @@ def predict(text: str, tok, model, slang_dict: Dict[str, str], id2label: Dict[in
 
     return {
         "text": text,
-        "processed": processed,
+        # "processed": processed,
         "label": label,
         "confidence": confidence,
         "scores": scores,
