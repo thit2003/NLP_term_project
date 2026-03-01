@@ -1,23 +1,3 @@
-#!/usr/bin/env python3
-"""
-Simple CLI for Thai-English code-mixed sentiment analysis using a fine-tuned XLM-R model.
-
-Updates in this version:
-- Ensures human-readable labels (positive/neutral/negative) even when config has LABEL_0/1/2
-- Allows forcing/custom label mapping via --labels JSON file
-- Keeps Windows-friendly default local model directory detection
-- Supports local path or Hugging Face Hub repo ID
-
-Usage:
-  python sentiment_cli.py                               # interactive prompt
-  python sentiment_cli.py --text "วันนี้ server ล่ม"    # one-off prediction
-  python sentiment_cli.py --model ./final_model --text "ดีมากเลย"
-  python sentiment_cli.py --model D:\\Sem_2_2025\\NLP\\NLP_term_project\\final_model --text "It is not the one I order"
-  python sentiment_cli.py --labels labels.json --text "mixed text"
-  # labels.json example:
-  # { "id2label": { "0": "positive", "1": "neutral", "2": "negative" } }
-"""
-
 import argparse
 import json
 import os
@@ -29,7 +9,6 @@ import torch
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-# Try to import PyThaiNLP for tokenization; if missing, fall back to simple split
 try:
     from pythainlp import word_tokenize
 except Exception:
@@ -45,19 +24,19 @@ def get_default_model_dir() -> str:
 
     Priority:
     1) MODEL_ID env var
-    2) Windows absolute path: D:\\Sem_2_2025\\NLP\\NLP_term_project\\final_model
-    3) Local folder relative to this script: ./final_model
+    2) Windows absolute path: D:\\Sem_2_2025\\NLP\\NLP_term_project\\english_model
+    3) Local folder relative to this script: ./english_model
     """
     env_value = os.environ.get("MODEL_ID")
     if env_value:
         return env_value
-    win_default = r"D:\\Sem_2_2025\\NLP\\NLP_term_project\\final_model_v2"
+    win_default = r"D:\\Sem_2_2025\\NLP\\NLP_term_project\\english_model"
     if os.path.isdir(win_default):
         return win_default
-    local_dir = Path(__file__).parent / "final_model_v2"
+    local_dir = Path(__file__).parent / "english_model"
     if local_dir.is_dir():
         return str(local_dir)
-    return "./final_model_v2"
+    return "./english_model"
 
 
 def load_slang_dictionary(path: Optional[str]) -> Dict[str, str]:
@@ -280,7 +259,7 @@ def main():
         return
 
     # Interactive loop
-    print("Thai-English Monolingual Sentiment CLI (Ctrl+C to exit)")
+    print("English Sentiment CLI (Ctrl+C to exit)")
     print(f"Model: {args.model}")
     print("Enter text:")
     try:
