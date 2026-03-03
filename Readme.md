@@ -1,6 +1,6 @@
-# Sentiment Analysis for English-Thai Code-Mixed Texts
+# Comparative Sentiment Analysis: Monolingual vs. Multilingual Models for English and Thai
 
-This project delivers a practical sentiment analysis tool designed specifically for **English-Thai code-mixed text** (e.g., "I am so ดีใจ today"). It addresses the challenge of analyzing the "wild west" of bilingual internet slang and informal scripts found on social media platforms.
+This project investigates the performance trade-offs in sentiment analysis when using dedicated monolingual models versus a unified multilingual model. By training distinct models for English and Thai, and comparing them against a combined multilingual model, we aim to understand how joint training affects language-specific accuracy.
 
 ## 👥 Team Members
 * **Thit Lwin Win Thant** (ID: 6540122)
@@ -10,67 +10,76 @@ This project delivers a practical sentiment analysis tool designed specifically 
 ---
 
 ## 📖 Project Overview
-Real-world social media and comment streams often feature heavy language mixing, slang, and intentional misspellings. Standard models often struggle to process this effectively. This project builds a lightweight, practical pipeline combining heuristic preprocessing tools with transformer-based fine-tuning to accurately classify sentiment.
+While multilingual transformers offer the convenience of a single model handling multiple languages, it is often debated whether they match the accuracy of models trained exclusively on a single language. This project builds a comparative pipeline to evaluate sentiment analysis performance across English and Thai texts. 
 
 ### Key Objectives
-* **Classification:** Achieve accurate sentiment labeling (**Positive, Negative, Neutral**) for mixed-language sentences.
-* **Identification:** Perform token-level language identification using fast heuristics (Unicode ranges) rather than heavy models.
-* **Robustness:** Implement normalization for slang and misspellings to improve reliability.
-* **Efficiency:** Create a pipeline with minimal manual work by using automated "silver labels" and a high-quality "gold set" for final evaluation.
-* **Key Deliverable:** A working sentiment classifier, a demo web app, and a detailed failure analysis report.
+* **Model Training:** Develop three distinct sentiment analysis models:
+    * `english-model`: Trained exclusively on English data.
+    * `thai-model`: Trained exclusively on Thai data.
+    * `multilingual-model`: Trained on a combined dataset of both English and Thai.
+* **Comparative Evaluation:**
+    * Compare the sentiment prediction of English texts using the `english-model` versus the `multilingual-model`.
+    * Compare the sentiment prediction of Thai texts using the `thai-model` versus the `multilingual-model`.
+* **Performance Analysis:** Determine if the multilingual model suffers from "capacity dilution" or if it benefits from cross-lingual transfer compared to its monolingual counterparts.
+* **Key Deliverable:** Three trained models, a comparative evaluation report, and a demo web app showcasing side-by-side inference.
 
 ---
 
 ## 🧠 Model Architecture
-We utilize **XLM-RoBERTa base (~270M parameters)** as the core model.
+To ensure a fair comparison, we utilize **XLM-RoBERTa base (~270M parameters)** as the foundational architecture for all three models. 
 
 **Why XLM-RoBERTa?**
-* **Industry Standard:** XLM-RoBERTa (XLM-R) is currently the industry standard for this specific scenario.
-* **Performance:** It consistently outperforms multilingual BERT (mBERT) because it was trained on significantly more Thai web data.
-* **Shared Vocabulary:** It uses a "SentencePiece" tokenizer that doesn't rely on spaces. It can process Thai characters and English words in the same sequence without breaking.
-* **Cross-Lingual Transfer:** By training on CommonCrawl data in 100+ languages, it learns that words like "happy" (EN) and "ดีใจ" (TH) occupy similar vector spaces, which is critical for code-mixed sentences.
+* **Consistent Baseline:** Using the same base architecture ensures that performance differences are due to the fine-tuning data rather than underlying model mechanics.
+* **Shared Vocabulary:** Its SentencePiece tokenizer effectively handles both Thai characters and English words without needing language-specific tokenization pipelines.
+* **Strong Multilingual Roots:** As an industry standard for cross-lingual tasks, it is the ideal candidate for the `multilingual_model`, while still being highly capable when fine-tuned purely as an `english_model` or `thai_model`.
 
 ---
 
 ## 📂 Datasets
-The model is trained on a combination of established corpora and scraped social media data:
+The models are fine-tuned using established monolingual corpora. 
 
-1.  **Wisesight Sentiment Corpus:** 26,737 samples for monolingual Thai sentiment.
-2.  **SST-2 (Stanford Sentiment Treebank):** 67,349 samples for English sentiment.
-3.  **Code-Mixed Data (Scraped) only if it is needed:**
-    * **Sources:** YouTube comments from Thai tech/gaming channels (e.g., **9arm**, **Bay Riffer**) and Twitter/X hashtags where English-Thai mixing is common.
-    * **Labeling:** Uses automated "silver-labeling" via Unicode ranges and heuristics, plus a manually labeled "gold" evaluation set of ~200 sentences.
+1. **English Training Data:**
+   * **SST-2 (Stanford Sentiment Treebank):** 67,349 samples used to train the `english-model` and partially train the `multilingual-model`.
+   * **Twitter Sentiment:** 27,481 samples used to train the `english-model` and partially train the `multilingual-model`.
+2. **Thai Training Data:**
+   * **Wisesight Sentiment Corpus:** 26,737 samples used to train the `thai-model` and partially train the `multilingual-model`.
+3. **Evaluation Sets:**
+   * Held-out test splits from both SST-2 and Wisesight.
 
 ---
 
 ## ⚙️ Methodology & Pipeline
 
-The system follows a linear pipeline:
+The project follows a comparative evaluation pipeline:
 
-1.  **Input:** Raw text sequence (e.g., "วันนี้ server ล่ม").
-2.  **Preprocessing:**
-    * **Tokenization:** Using PyThaiNLP.
-    * **Language ID (LID):** Token-level tagging using Unicode ranges (Thai script -> TH, Latin -> EN) to keep the pipeline lightweight.
-    * **Normalization:** Uses a slang dictionary (`slang_dictionary.json`) and Levenshtein distance for fuzzy matching to handle misspellings.
-3.  **Model Inference:** Fine-tuned XLM-RoBERTa processes the normalized tokens.
-4.  **Output:** Sentiment classification (Positive/Negative/Neutral) with a confidence score.
+1. **Data Preparation & Splitting:**
+   * Standardize labels across both datasets to **Positive, Negative, and Neutral**.
+   * Create strict train/validation/test splits.
+2. **Independent Fine-Tuning:**
+   * **Run 1:** Fine-tune XLM-R on SST-2 and twitter-sentiment to create the `english-model`.
+   * **Run 2:** Fine-tune XLM-R on Wisesight to create the `thai-model`.
+   * **Run 3:** Fine-tune XLM-R on combined SST-2 + twitter-sentiment + Wisesight to create the `multilingual-model`.
+3. **Comparative Inference:**
+   * Feed English test data into both the `english-model` and `multilingual-model`.
+   * Feed Thai test data into both the `thai-model` and `multilingual-model`.
+4. **Output & Routing:** The web app will include a language identification step (LID) to route user input to the correct monolingual model, while simultaneously passing it to the multilingual model for side-by-side comparison.
 
 ---
 
 ## 📊 Evaluation Metrics
-To prove accuracy, speed, and robustness, we track the following metrics:
-* **Accuracy:** Macro F1 score on the gold evaluation set.
-* **Error Analysis:** Confusion matrix to analyze failures, specifically when English content exceeds 50% of the sentence.
-* **Speed:** Inference latency per sentence (ms).
-* **Robustness:** Word Error Rate (WER) and Character Error Rate (CER) between raw and normalized text.
+We will track the following metrics to answer our core research question:
+* **Primary Metric:** Macro F1 Score and Accuracy on the respective held-out test sets.
+* **A/B Comparison:** Delta in F1 score between (`english-model` vs. `multilingual-model`) and (`thai-model` vs. `multilingual-model`).
+* **Confusion Matrices:** To identify if the multilingual model struggles with specific sentiments (e.g., neutral sarcasm) more than the monolingual models.
 
 ---
 
 ## 🛠️ Usage
-*This project results in a user-friendly web app where users enter text and the system displays the sentiment.*
+*The final deliverable is a web application where users can input text, and the system provides side-by-side sentiment predictions.*
 
 **Input Example:**
-วันนี้ server ล่ม
+"The new update is absolutely terrible."
 
 **Output Example:**
-Sentiment: Negative
+* `English Model` Prediction: Negative (Confidence: 0.98)
+* `Multilingual Model` Prediction: Negative (Confidence: 0.92)

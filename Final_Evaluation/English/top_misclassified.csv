@@ -1,0 +1,201 @@
+﻿text,labels,source,pred,pred_label,true_label,confidence
+slick piece of cross-promotion . ,0,sst2_val,2,negative,positive,0.9935813
+moretti 's compelling anatomy of grief and the difficult process of adapting to loss . ,2,sst2_val,0,positive,negative,0.9935161
+this riveting world war ii moral suspense story deals with the shadow side of american culture : racial prejudice in its ugly and diverse forms . ,2,sst2_val,0,positive,negative,0.9935041
+"""First surprise birthday ever, best night I`ve had in a **** long time!""",1,twitter_test,0,positive,neutral,0.99275136
+i wear a lot of white  http://tinyurl.com/dlbltg,2,twitter_test,1,neutral,negative,0.99258065
+"""Friday Night Magic last night, I lost so bad  I suck at draft""",1,twitter_test,2,negative,neutral,0.99245065
+my poor baby girl is poorly  x,1,twitter_test,2,negative,neutral,0.9915475
+My younger sister flies in next week for a two week visit. So blessed to look forward to seeing family members visit.,1,twitter_test,0,positive,neutral,0.9905036
+hilariously inept and ridiculous . ,0,sst2_val,2,negative,positive,0.98993975
+You are quite welcome Mr. Poole.,1,twitter_test,0,positive,neutral,0.98923886
+the live version is so much better  ? http://blip.fm/~79my3,1,twitter_test,0,positive,neutral,0.98918813
+missin the #ia2009 guys really,1,twitter_test,2,negative,neutral,0.988848
+as unseemly as its title suggests . ,0,sst2_val,2,negative,positive,0.98852766
+I`m concerned for that family,0,twitter_test,2,negative,positive,0.9881684
+"it 's inoffensive , cheerful , built to inspire the young people , set to an unending soundtrack of beach party pop numbers and aside from its remarkable camerawork and awesome scenery , it 's about as exciting as a sunburn . ",2,sst2_val,0,positive,negative,0.98786676
+"writer/director joe carnahan 's grimy crime drama is a manual of precinct cliches , but it moves fast enough to cover its clunky dialogue and lapses in logic . ",0,sst2_val,2,negative,positive,0.987475
+Now I like #startrek. Personal feels that #Startrek movie is better than #xmen.,1,twitter_test,0,positive,neutral,0.98673254
+I`ve just about made it all the way round the park jogging. Quite pleased for my 6th outing,1,twitter_test,0,positive,neutral,0.98658806
+soo **** stressed out...I think I could possibly lose it,0,twitter_test,2,negative,positive,0.9864319
+// i feel your pain. i once lived in an apt for 6 mos where the previous tenant had 4 cats. burning eyes/tight lungs =  gregg,1,twitter_test,2,negative,neutral,0.98608136
+""" ohh snapp, have fun""",1,twitter_test,0,positive,neutral,0.9859583
+curses upon the ridiculously slow internetz at work!  The dang image just now loaded...,1,twitter_test,2,negative,neutral,0.98519
+"""Lovin` , , & _Bailon SOOOO much right now!""",1,twitter_test,0,positive,neutral,0.98510265
+Sorry JJ i missed that post  I`ll make sure do so next time.,1,twitter_test,2,negative,neutral,0.98495376
+"""wishing, i was at the michou show right now.. god. life isnt fair""",1,twitter_test,2,negative,neutral,0.9847081
+I`m loving Please Don`t Leave Me by Pink!,1,twitter_test,0,positive,neutral,0.9846444
+Getting the FAB portraits ready to upload today,0,twitter_test,1,neutral,positive,0.98456466
+I have a new found respect for you now that I know you know the Konami code!,1,twitter_test,0,positive,neutral,0.98454845
+"the jabs it employs are short , carefully placed and dead-center . ",0,sst2_val,2,negative,positive,0.9843758
+keeping it chilled.,0,twitter_test,1,neutral,positive,0.98424083
+oh my god!!! i cried so much!!! watch this guys from BGT  http://bit.ly/5t5Xz,1,twitter_test,2,negative,neutral,0.98324007
+"""Lots of tasks to complete today. First, wecloming new members to Canadamigos Social Networking site, www.canadamigos.com, and coffee""",0,twitter_test,1,neutral,positive,0.9828047
+I hate the exams . first time and last time in this school  then i`m out ! after 10 years! yaaaay !,1,twitter_test,2,negative,neutral,0.9824426
+Danny cut his beautiful curls,2,twitter_test,0,positive,negative,0.9823926
+"""WIDE awake, scoffed 3/4`s of a pizza and feel like a sumo  such a weak day! Run tomorrow""",1,twitter_test,2,negative,neutral,0.98154175
+Sorry. Just think - 2.5 hrs till 2 days off!,1,twitter_test,2,negative,neutral,0.98118585
+oh yes! Level 40,0,twitter_test,1,neutral,positive,0.9804033
+Wango tango!!! Good night all,1,twitter_test,0,positive,neutral,0.98010296
+...Nomore adventure time,2,twitter_test,1,neutral,negative,0.9797838
+Spilled chocolate milk in my car,2,twitter_test,1,neutral,negative,0.97975415
+lol haha very funnyyy lol im talking to my bestfriend ashleyyyy!!!,1,twitter_test,0,positive,neutral,0.9789621
+hey hunnie  how are u?? I miss talkin to u! Ty for the follow,1,twitter_test,2,negative,neutral,0.97895926
+All ready for work... except my arm,2,twitter_test,1,neutral,negative,0.978917
+- That Jasper clip is my first 'favorite' Twitter message.,1,twitter_test,0,positive,neutral,0.97879124
+"""Slept in, woke up with an iced coffee, lazed about & went out for a late lunch with the BF. It`s been a sweet little laid-back Saturday.""",1,twitter_test,0,positive,neutral,0.9787659
+i`m still in bed and on the laptop ...yep borin !!!,1,twitter_test,2,negative,neutral,0.97827977
+"""Bored, making a mothers day card""",1,twitter_test,2,negative,neutral,0.9778074
+i think that i`m the only 1 on!!!,0,twitter_test,1,neutral,positive,0.97755766
+yes it does,0,twitter_test,1,neutral,positive,0.97751606
+i want to gooo,0,twitter_test,1,neutral,positive,0.9772718
+""" I`ve never been to Prague, but if i had the money, it`ll be in the 10 first cities I visit""",0,twitter_test,1,neutral,positive,0.97715
+Im so tired and sick  i have to be better on Sunday so i can sing morning and night,1,twitter_test,2,negative,neutral,0.9770477
+Hates untalented **** being mean to my talented friends,1,twitter_test,2,negative,neutral,0.9769837
+"""Wow, the new Google icons suck   http://bit.ly/z7JIE""",1,twitter_test,2,negative,neutral,0.97683245
+"""I wish I was out of school...But sadly, I still have like another month left.""",1,twitter_test,2,negative,neutral,0.9751658
+I forget how much I miss my tribe til I have limited access to talking to them. Spotty internet in the country so I won`t be here long.,0,twitter_test,2,negative,positive,0.9751346
+your test works fine for me  tweetdeck is so cool eh?,1,twitter_test,0,positive,neutral,0.97471493
+Yo somebody`s mother just came to the club dresses like she`s going straight to church after the club! I feel like I`m going to hell 4  @,1,twitter_test,2,negative,neutral,0.9746348
+"""  youre diabetic?   so is my dad.  & i might be too, not sure.  are you still allowed to eat sugar throughout the day?""",2,twitter_test,1,neutral,negative,0.9740675
+Still sick  bout to play some ps3 till the laker game starts,1,twitter_test,2,negative,neutral,0.97403425
+"""i get so sucked in to true life, and that steve-o documentary was intense, i love that ****, it`s nice to see people get their lives back""",1,twitter_test,0,positive,neutral,0.973892
+Perhaps they see it as the twitter version of pulling someone`s pigtails? Let me know if that works out for you.,2,twitter_test,1,neutral,negative,0.9737741
+"... mafia , rap stars and hood rats butt their ugly heads in a regurgitation of cinematic violence that gives brutal birth to an unlikely , but likable , hero . ' ",0,sst2_val,2,negative,positive,0.9722936
+"""jfc, it needs to be the 23rd. i will have been graduated, and i ended up getting AWESOME hook-ups for FTSK and Rocket. so excited!""",1,twitter_test,0,positive,neutral,0.97204393
+Thanks    ? http://blip.fm/~5z6n8,1,twitter_test,0,positive,neutral,0.97157234
+""" Yeah, I`ll probably `stop` when ALL of my stories are completely finished. That won`t be for a while though. Wide awake.""",2,twitter_test,1,neutral,negative,0.97081137
+if steven soderbergh 's ` solaris ' is a failure it is a glorious failure . ,0,sst2_val,2,negative,positive,0.9703053
+making german apple slice  nom nom nom,0,twitter_test,1,neutral,positive,0.9700752
+got to see 2 of my favorite guys back on long island  heading back to the city tomorrow or monday to be with the boyfriend! <3,2,twitter_test,0,positive,negative,0.9686285
+i`m a bum today,1,twitter_test,2,negative,neutral,0.96846306
+that`s great! i was never so good at the jump roping...,1,twitter_test,0,positive,neutral,0.9682112
+ok      Love you girls. but work beckons.  Will come back later for #twpp,1,twitter_test,0,positive,neutral,0.96749854
+I`ll be grand....,1,twitter_test,0,positive,neutral,0.9674328
+american chai encourages rueful laughter at stereotypes only an indian-american would recognize . ,2,sst2_val,0,positive,negative,0.9664246
+""" Possibly, yes.""",0,twitter_test,1,neutral,positive,0.9655448
+"""eating some breakfast at Panera Bread. boring cloudy weather, lil drizzle""",1,twitter_test,2,negative,neutral,0.9645527
+"""  I`ve run out of earl grey, so having lemon tea instead, then whb for me too""",2,twitter_test,1,neutral,negative,0.9644273
+I didn`t get a callback for the play I cried...  oh well I guess it`s back to being a techie..,1,twitter_test,2,negative,neutral,0.9637578
+this surreal gilliam-esque film is also a troubling interpretation of ecclesiastes . ,0,sst2_val,2,negative,positive,0.9630335
+""" Good Grief! I can`t say much, I was driving home from Martin through IKE last fall. Be interesting to hear what he says!""",1,twitter_test,0,positive,neutral,0.9625515
+At the bus stop there`s always a big pile of loogies. So. Gross.,0,twitter_test,2,negative,positive,0.9624039
+_k_2k - Y!360 closing? get out!,2,twitter_test,1,neutral,negative,0.96233016
+i`m not feeling twitter at the moment,1,twitter_test,2,negative,neutral,0.9622691
+the AC tix are actually $20 but the show is sold out.  I`d have to get tix through stubhub and pay up to $70.,2,twitter_test,1,neutral,negative,0.96130973
+Internet 1 drawing 0 ....**** I`m backing up blackberry files which could take hours  then to the drawing preps done,2,twitter_test,1,neutral,negative,0.96129465
+""" oic, where in Cavite? no sorry im not from America ... if you can see my profile, there`s no word like America there""",1,twitter_test,2,negative,neutral,0.9600663
+"""Hmm, had first pizza in ages and feel a bit sick now  That`ll teach me!""",1,twitter_test,2,negative,neutral,0.95993775
+grrrrrrrrrrrrrr ive barely read any of it,1,twitter_test,2,negative,neutral,0.9595667
+"a coda in every sense , the pinochet case splits time between a minute-by-minute account of the british court 's extradition chess game and the regime 's talking-head survivors . ",0,sst2_val,2,negative,positive,0.959366
+"""Working... And attempting to keep squirrels away.............. Squirels 1, jesska 0   I should stick to spiders""",2,twitter_test,1,neutral,negative,0.9588914
+"""_ Heading off to Poole around 4ish,  has some serious gardening to do before we go, no Tweetdeck til Sunday evening,""",2,twitter_test,1,neutral,negative,0.9588401
+OmG U NasTY,2,twitter_test,1,neutral,negative,0.95869917
+"the lower your expectations , the more you 'll enjoy it . ",2,sst2_val,0,positive,negative,0.9583711
+taking care of sick children,0,twitter_test,2,negative,positive,0.95822334
+""" Yes, have to be right for church""",0,twitter_test,1,neutral,positive,0.95719093
+but it still jingles in the pocket . ,0,sst2_val,2,negative,positive,0.95618933
+"you 'll gasp appalled and laugh outraged and possibly , watching the spectacle of a promising young lad treading desperately in a nasty sea , shed an errant tear . ",0,sst2_val,2,negative,positive,0.95615935
+"""_Walker21 sadly no, I`ll be going to the killumbus show. I really want to but no one wants to drive me there""",1,twitter_test,2,negative,neutral,0.9560017
+it has all the excitement of eating oatmeal . ,2,sst2_val,0,positive,negative,0.9555913
+long day and i still have to mow the lawn,2,twitter_test,1,neutral,negative,0.9553976
+Hey Mitchel when will you be live again? I didn`t get a chance to call you,2,twitter_test,1,neutral,negative,0.9549767
+""" Aw, that song makes me think of girl scouts.""",0,twitter_test,1,neutral,positive,0.9543633
+Downing a glass of ginger ale and then relishing an early evening in bed with 'Because I Said So' on Lifetime.,1,twitter_test,0,positive,neutral,0.9543338
+well there go my peace corps prospects.,0,twitter_test,1,neutral,positive,0.95405686
+cannot relaxing because she have to practice for her graduation,1,twitter_test,2,negative,neutral,0.9539679
+is awake.  Still feeling sick.     But I got the blog done at least. http://plurk.com/p/x17t9,0,twitter_test,2,negative,positive,0.9532534
+""" thank you! i was just playing that a moment ago, actually! a very different, even more chill version.  *spooky*! haha.""",1,twitter_test,0,positive,neutral,0.95322794
+"""waiting for aaron to get into town, and then leave him for work. booo""",2,twitter_test,1,neutral,negative,0.9522865
+i cant,1,twitter_test,2,negative,neutral,0.95205617
+Just found mj mouse flats at DJs. Of course there are none left in my size,2,twitter_test,1,neutral,negative,0.95167255
+ughh on the phone with HP!,1,twitter_test,2,negative,neutral,0.9513521
+"""watching a film, recovering from my operation""",0,twitter_test,1,neutral,positive,0.9508168
+I lost 15 dollars. I always lose my money,1,twitter_test,2,negative,neutral,0.9499322
+the experience of going to a film festival is a rewarding one ; the experiencing of sampling one through this movie is not . ,2,sst2_val,0,positive,negative,0.94927883
+sam mendes has become valedictorian at the school for soft landings and easy ways out . ,2,sst2_val,0,positive,negative,0.94904655
+_me Thanks! Kinda bittersweet though,1,twitter_test,0,positive,neutral,0.94849473
+im doing that **** right now ... im on vacation and you got me workin,1,twitter_test,2,negative,neutral,0.9483255
+Just got the Nashville IHOP staff to hit the Dougie with me and Mayne. What a **** night,0,twitter_test,2,negative,positive,0.9459482
+How can you guys lived in a city (paris)where u spend you entire life in the trafficjam...grrrr ...m` not used to it anymore,1,twitter_test,2,negative,neutral,0.9454181
+Marking going ok so far A`s and B`s so far - relieved it looks like I have future programmers in class,1,twitter_test,0,positive,neutral,0.9448246
+Whole body is sore from moving hundreds of pieces of luggage last weekend.   Guess I should visit the gym more often,1,twitter_test,2,negative,neutral,0.9422788
+its weird how thinking about may 2nd totally changed my crappy mood to happiness...i miss  so much,0,twitter_test,2,negative,positive,0.9413401
+Just got back from a run & I`m feeling grrrrrreeeeeaat!!!,0,twitter_test,2,negative,positive,0.94105107
+Sam can go shoot her self.,2,twitter_test,1,neutral,negative,0.94048744
+Boring? Who you been talking to? Lol not me  ( no ****),1,twitter_test,2,negative,neutral,0.94014
+arrr bummer  who do you want to win?,1,twitter_test,2,negative,neutral,0.93954486
+O.k i feel like i need to cry now  i can`t believe that in less than 2 years ill be walking across the stage to get a High School diploma!,1,twitter_test,2,negative,neutral,0.939167
+intriguing documentary which is emotionally diluted by focusing on the story 's least interesting subject . ,0,sst2_val,2,negative,positive,0.93809354
+"""Actually, I think I`ll be more upset if I lost my data for Cake Mania 3. I was pretty far into the game""",1,twitter_test,2,negative,neutral,0.93756104
+haha! sorry to hear that,1,twitter_test,2,negative,neutral,0.93741256
+_ Truetrue  But he`s not! xD,0,twitter_test,1,neutral,positive,0.9373758
+"""  Missed all your tweets again Joe, **** that time difference!!! (UK) Dont 4get about your fave supporters in the UK!!!  ****""",1,twitter_test,2,negative,neutral,0.93714803
+holden caulfield did it better . ,2,sst2_val,0,positive,negative,0.93664974
+"""Look, everyone! I`m a bad boy! I`m ranked higher than Meghan McCain!  http://tinyurl.com/oj76mz""",1,twitter_test,2,negative,neutral,0.93604344
+rarely has leukemia looked so shimmering and benign . ,2,sst2_val,0,positive,negative,0.93511385
+""" umm get ready, help my mum, give GJ his presents when he gets up (could be a while), wait for people to arrive, then party""",0,twitter_test,1,neutral,positive,0.93427724
+yeahh  those two times we`ve stood next to each other were special times...,1,twitter_test,0,positive,neutral,0.9339431
+it`s mother`s day...i already bought and gave my mother`s day present to my mother.,0,twitter_test,1,neutral,positive,0.9334205
+""" hehe, I can almost hear out of my right ear now  Can you yet?""",0,twitter_test,1,neutral,positive,0.9302968
+i mean give. lol with a finger! then crash her car! lol jk. thats bad. just ignore her,1,twitter_test,2,negative,neutral,0.9298742
+Discovered that Numpy arrays can hold values of any type.  Useful for manipulating arrays of numbers with uncertainties.,2,twitter_test,0,positive,negative,0.9297895
+Signing off for the night. Watching 'The Reader' and I`m sure I`ll snooze off at some point. Good night all,1,twitter_test,0,positive,neutral,0.9296079
+You have DSL? Welcome to 2009!,0,twitter_test,1,neutral,positive,0.9290675
+beat? don`t understand,1,twitter_test,2,negative,neutral,0.9268543
+Mudweight hauled in for last time by   http://yfrog.com/0zr2jqj,2,twitter_test,1,neutral,negative,0.9266607
+"""48 Laws of Power by Robert Greene. It`s a little bit much for me, but is anyone interested in a copy? DM me if you are""",0,twitter_test,1,neutral,positive,0.9253617
+"""For US tweeps, don`t forget to call your mom today...""",0,twitter_test,1,neutral,positive,0.92514
+Aaaaahhhh.... Friday!!!! but.......     Funeral at 5,2,twitter_test,1,neutral,negative,0.92503613
+Big Sad Face   Bing doesn`t work on iPhone.  It just takes you to the regular mobile Live search.,1,twitter_test,2,negative,neutral,0.924736
+""" Glad you like it  took around 2 and a half hours, would have been less but i kept stopping for food breaks haha  i was""",1,twitter_test,0,positive,neutral,0.9245471
+Got a sunburn from Coney Island bike ride,1,twitter_test,2,negative,neutral,0.92418283
+yup! way to **** early and I`m already at work,1,twitter_test,2,negative,neutral,0.9227873
+At the  concert! I hope  makes a guest appearance,1,twitter_test,0,positive,neutral,0.9227176
+That ur anti is what I understood from the message. Sorry left off ur don`t vote BNP msg at end due 2 space,1,twitter_test,2,negative,neutral,0.92250144
+"""I wish i had my iPod , i need some jonas . I miss their sexy voices  JB forever !""",1,twitter_test,2,negative,neutral,0.9218656
+"... routine , harmless diversion and little else . ",0,sst2_val,2,negative,positive,0.92185676
+no screen fantasy-adventure in recent memory has the showmanship of clones ' last 45 minutes . ,0,sst2_val,2,negative,positive,0.9216572
+oh poor you  atleast get paid for staying back or?,1,twitter_test,2,negative,neutral,0.9210636
+reconnecting with amadeus and friends,1,twitter_test,0,positive,neutral,0.92092454
+I know.  I am definitely going to try and see Up this weekend.,0,twitter_test,1,neutral,positive,0.9190261
+""" Please send me those youtube links, Erin watched most of them but I was cooking and didn`t get to see the cowboys""",2,twitter_test,1,neutral,negative,0.9188778
+"while there 's something intrinsically funny about sir anthony hopkins saying ` get in the car , bitch , ' this jerry bruckheimer production has little else to offer ",0,sst2_val,2,negative,positive,0.9187917
+this creepy guy when I was walking the dog  I`ve had my fill of creepers for the day,1,twitter_test,2,negative,neutral,0.91782546
+lao mein and spanikopita HAHA you would have to be here to know,0,twitter_test,1,neutral,positive,0.9172469
+Is trying to recover from a broken heart....yet again for the 2nd or 3rd time,1,twitter_test,2,negative,neutral,0.9171918
+Pair it up with Fringe on Tuesday? That smells like a win imo as well.,1,twitter_test,0,positive,neutral,0.916397
+i 'll bet the video game is a lot more fun than the film . ,2,sst2_val,0,positive,negative,0.9163253
+- ummmm. no comment. LOL. I actually have not watched GH in about a week.,0,twitter_test,1,neutral,positive,0.9162084
+I want Crimson Gem Saga.  I will just go play RF Guerilla demo repeatedly. I (Mission Failed - YOU DIED) so many times from dicking around,1,twitter_test,2,negative,neutral,0.9149911
+4 hours till Mothers Day Party  Yeah!,0,twitter_test,1,neutral,positive,0.9148332
+"good film , but very glum . ",0,sst2_val,2,negative,positive,0.9148268
+639 baby! GOD ITS SAD REALLY  oh well lifes a partaaay! xxxxxxxxxx,1,twitter_test,2,negative,neutral,0.9138391
+i wish i wasn`t all  bummed but i kinda am,0,twitter_test,2,negative,positive,0.91218
+""" well, i must say she is very lucky to have you! i guess that means no chillin and concert with me huh""",1,twitter_test,0,positive,neutral,0.91199523
+"it 's somewhat clumsy and too lethargically paced -- but its story about a mysterious creature with psychic abilities offers a solid build-up , a terrific climax , and some nice chills along the way . ",2,sst2_val,0,positive,negative,0.90885144
+i was so bored i decided to iron all my baju sklh. thn i realized i hate doing tht. so all i did was iron a sleeve HAHAHA. im off to schl,1,twitter_test,2,negative,neutral,0.90817773
+"we root for ( clara and paul ) , even like them , though perhaps it 's an emotion closer to pity . ",0,sst2_val,2,negative,positive,0.90748173
+"""No phone call yett... Hrmm. Maybe a call from my end is in order?  I`ll wait a bit longer, Prom nights are often `spuratic` moments.""",2,twitter_test,1,neutral,negative,0.90715104
+Up and washed  I`m clothing myself as I type xD WOOOO,0,twitter_test,1,neutral,positive,0.9068844
+"on the heels of the ring comes a similarly morose and humorless horror movie that , although flawed , is to be commended for its straight-ahead approach to creepiness . ",0,sst2_val,2,negative,positive,0.90683633
+I`m looking forward too see and hear you in Norway!! Live fast!,1,twitter_test,0,positive,neutral,0.9064581
+a by-the-numbers patient/doctor pic that covers all the usual ground ,2,sst2_val,0,positive,negative,0.9060697
+Momma martini went food shopping without me!!!!,2,twitter_test,1,neutral,negative,0.9060543
+My near daily exercise is starting to show results.,1,twitter_test,0,positive,neutral,0.90480214
+"if you believe any of this , i can make you a real deal on leftover enron stock that will double in value a week from friday . ",2,sst2_val,0,positive,negative,0.90453786
+weathers let me down this morning...ugh!...hada gd nite tho!,1,twitter_test,2,negative,neutral,0.90381956
+i know im wrong .. just give me one more chance   sEnti .. :],1,twitter_test,2,negative,neutral,0.9028847
+_LaMont yr very young looking dude,0,twitter_test,1,neutral,positive,0.9028372
+Doing some test shooting later this afternoon.  Did I mention being in Holland for an indie wine festival this week? My tongue is red.,1,twitter_test,2,negative,neutral,0.901775
+""" nevermind....I kept reading and see ya`ll r gonna be in Williamsburg   I`ll mind my business now, lol""",2,twitter_test,1,neutral,negative,0.9016623
+Ghunghte Mein Chanda Hai Phir Bhi Hai Phela Chaaron Aur Ujala i love that songggggg ps  i got lost in morrisons,1,twitter_test,0,positive,neutral,0.9013957
+"""_rose Mornin` !  Missed dance time, so I guess I will have to dance extra hard tomorrow...""",1,twitter_test,2,negative,neutral,0.89841145
+most definitely,0,twitter_test,1,neutral,positive,0.8977239
+will u say shoutout to NIKKI!!! please   (Soulja Boy Tell `Em LIVE live > http://ustre.am/2UhS),0,twitter_test,1,neutral,positive,0.8966201
+_John Sounds like a terrific service. I`m sorry to hear about her mom.,2,twitter_test,1,neutral,negative,0.8963073
+yeah...I hope it turns out... 20 more minutes!,1,twitter_test,0,positive,neutral,0.8962251
+Well tell me what fashion tips you need and I`m your woman  hehehe,0,twitter_test,1,neutral,positive,0.8959641
+we`ll test that theory  with no right arm to strum with.  Got a feelin I`ll be humming my new tunes for a while,2,twitter_test,1,neutral,negative,0.89414
+"very special effects , brilliantly bold colors and heightened reality ca n't hide the giant achilles ' heel in `` stuart little 2 `` : there 's just no story , folks . ",2,sst2_val,0,positive,negative,0.89397544
+and I was just gonna ask you if you wanted to go to CLUB Hidden House on sat night. hehe.,0,twitter_test,1,neutral,positive,0.8938302
