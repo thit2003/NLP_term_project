@@ -20,13 +20,6 @@ DEFAULT_LABEL2ID = {v: k for k, v in DEFAULT_ID2LABEL.items()}
 
 
 def get_default_model_dir() -> str:
-    """Resolve default model directory with Windows path preference.
-
-    Priority:
-    1) MODEL_ID env var
-    2) Windows absolute path: D:\\Sem_2_2025\\NLP\\NLP_term_project\\english_model
-    3) Local folder relative to this script: ./english_model
-    """
     env_value = os.environ.get("MODEL_ID")
     if env_value:
         return env_value

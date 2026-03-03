@@ -41,23 +41,16 @@ DEFAULT_LABEL2ID = {v: k for k, v in DEFAULT_ID2LABEL.items()}
 
 
 def get_default_model_dir() -> str:
-    """Resolve default model directory with Windows path preference.
-
-    Priority:
-    1) MODEL_ID env var
-    2) Windows absolute path: D:\\Sem_2_2025\\NLP\\NLP_term_project\\final_model
-    3) Local folder relative to this script: ./final_model
-    """
     env_value = os.environ.get("MODEL_ID")
     if env_value:
         return env_value
-    win_default = r"D:\\Sem_2_2025\\NLP\\NLP_term_project\\final_model_v2"
+    win_default = r"D:\\Sem_2_2025\\NLP\\NLP_term_project\\multilingual_model"
     if os.path.isdir(win_default):
         return win_default
-    local_dir = Path(__file__).parent / "final_model_v2"
+    local_dir = Path(__file__).parent / "multilingual_model"
     if local_dir.is_dir():
         return str(local_dir)
-    return "./final_model_v2"
+    return "./multilingual_model"
 
 
 def load_slang_dictionary(path: Optional[str]) -> Dict[str, str]:
@@ -280,7 +273,7 @@ def main():
         return
 
     # Interactive loop
-    print("Thai-English Monolingual Sentiment CLI (Ctrl+C to exit)")
+    print("Thai-English Multilingual Sentiment CLI (Ctrl+C to exit)")
     print(f"Model: {args.model}")
     print("Enter text:")
     try:
