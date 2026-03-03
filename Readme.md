@@ -21,7 +21,7 @@ While multilingual transformers offer the convenience of a single model handling
     * Compare the sentiment prediction of English texts using the `english-model` versus the `multilingual-model`.
     * Compare the sentiment prediction of Thai texts using the `thai-model` versus the `multilingual-model`.
 * **Performance Analysis:** Determine if the multilingual model suffers from "capacity dilution" or if it benefits from cross-lingual transfer compared to its monolingual counterparts.
-* **Key Deliverable:** Three trained models, a comparative evaluation report, and a demo web app showcasing side-by-side inference.
+* **Key Deliverable:** Three trained models, a comparative evaluation report, and a demo python cli showcasing side-by-side inference.
 
 ---
 
@@ -75,7 +75,7 @@ We will track the following metrics to answer our core research question:
 ---
 
 ## 🛠️ Usage
-*The final deliverable is a web application where users can input text, and the system provides side-by-side sentiment predictions.*
+*The final deliverable is a python cli where users can input text, and the system provides side-by-side sentiment predictions.*
 
 **Input Example:**
 "The new update is absolutely terrible."
